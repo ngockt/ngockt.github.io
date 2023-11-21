@@ -1,0 +1,24 @@
+# Main components
+- Project setup
+  - Goals
+  - User Experience
+  - Performance constraints
+  - Evaluation
+  - Personalization
+  - Project constrain
+- Data pipeline
+  - Data availability and collection
+  - User data
+  - Storage
+  - Data preprocessing & representation
+  - Challenges
+  - Privacy
+  - Biases
+- Modeling - selecting, training, debugging the model
+  - Model selection
+  - Training
+  - Debugging
+  - Hyperparameter tunning
+  - Scaling
+  - Serving
+- Serving - testing, deploying maintaining
