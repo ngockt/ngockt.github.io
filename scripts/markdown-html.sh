@@ -1,1 +1,0 @@
-/home/ngockt/miniconda3/envs/docs/bin/python src/convert_markdown_html.py
