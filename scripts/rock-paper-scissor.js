@@ -27,7 +27,7 @@ function update_table_score() {
 }
 
 function get_emoji_image(move) {
-	return `<img src="../images/${move}-emoji.png" class="small-image" />`;
+	return `<img src="./images/${move}-emoji.png" class="small-image" />`;
 }
 
 function update_table_stats() {
@@ -118,7 +118,7 @@ function autoplay() {
 		intervalId = setInterval(() => {
 			const playerMove = pickComputerMove();
 			playGame(playerMove);
-		}, 1000);
+		}, 500);
 		isAutoPlaying = true;
 		document.querySelector(".button-autoplay").innerText = "Auto Play: On"
 	} else {
