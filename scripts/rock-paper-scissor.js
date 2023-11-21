@@ -112,6 +112,7 @@ function reset_stats() {
 let isAutoPlaying = false;
 let intervalId;
 
+
 function autoplay() {
 	if (!isAutoPlaying) {
 		intervalId = setInterval(() => {
@@ -119,8 +120,10 @@ function autoplay() {
 			playGame(playerMove);
 		}, 1000);
 		isAutoPlaying = true;
+		document.querySelector(".button-autoplay").innerText = "Auto Play: On"
 	} else {
 		clearInterval(intervalId);
 		isAutoPlaying = false;
+		document.querySelector(".button-autoplay").innerText = "Auto Play: Off"
 	}
 }
