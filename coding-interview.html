@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
 	<body>
 		<script src="scripts/import-header.js"></script>
 		<script type="module" src="scripts/zero-md.min.js"></script>
 
-		<div w3-include-html="header.html"></div>
+		<div include-html="header.html"></div>
 		<div class="content">
-			<zero-md src="docs/coding-interview/ACM ICPC Team.md"></zero-md>
-		</div>
+			<div include-html="docs\coding-interview\ACM ICPC Team.html"></div>
 
+		</div>
 		<script>
 			includeHTML();
 		</script>
