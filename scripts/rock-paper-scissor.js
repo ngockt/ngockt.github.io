@@ -77,11 +77,13 @@ function playGame(playerMove) {
 			}
 		}
 	}
-	stats.push({
-		playerMove: playerMove,
-		computerMove: computerMove,
-		result: result,
-	});
+	stats = [
+		{
+			playerMove: playerMove,
+			computerMove: computerMove,
+			result: result,
+		},
+	].concat(stats);
 	console.log(stats);
 	console.log(result);
 	if (result === "You win") {
@@ -112,7 +114,6 @@ function reset_stats() {
 let isAutoPlaying = false;
 let intervalId;
 
-
 function autoplay() {
 	if (!isAutoPlaying) {
 		intervalId = setInterval(() => {
@@ -120,10 +121,10 @@ function autoplay() {
 			playGame(playerMove);
 		}, 500);
 		isAutoPlaying = true;
-		document.querySelector(".button-autoplay").innerText = "Auto Play: On"
+		document.querySelector(".button-autoplay").innerText = "Auto Play: On";
 	} else {
 		clearInterval(intervalId);
 		isAutoPlaying = false;
-		document.querySelector(".button-autoplay").innerText = "Auto Play: Off"
+		document.querySelector(".button-autoplay").innerText = "Auto Play: Off";
 	}
 }
